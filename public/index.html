@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <meta name="referrer" content="never" />
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<div id="building">
+  <!--  src="https://cn.bing.com/th?id=OHR.OliveOrchard_ZH-CN8198989130_1920x1080.jpg&amp;rf=LaDigue_1920x1080.jpg&amp;pid=hp"-->
+  <!--  src="https://imglf3.lf127.net/img/TUszdkJBZ0ErekVncnlHL0V5elpsVWdVVzRkUFljbTM0S2x1eUtxZituMWlyYlpxL3BKVEpnPT0.jpg?imageView&thumbnail=1744y1268&type=jpg&quality=96&stripmeta=0&type=jpg"-->
+
+  <img id="bgBox" alt=""
+       src="https://imglf6.lf127.net/img/c0333f9d89217d67/eHdkQmxiaHk3Qnptand2OHVYV25jbTVrRFRzZEJKKzBBV3pMZUdibzc0RT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg"
+       style="display: block; opacity: 1; transform: scale(1.1);">
+  <!--  我有我自己的毛玻璃-->
+
+  <img id="bgBox" alt=""
+       src=""
+       class="g-filter" style="display: block; opacity: 1; transform: scale(1.1);">
+
+  <img id="bgBox1" alt=""
+       src="https://ts1.cn.mm.bing.net/th/id/R-C.07f468b53c25821ba3e6f132d6d25bd8?rik=DErpDe5xln0zkQ&riu=http%3a%2f%2fphotos.tuchong.com%2f280990%2ff%2f3418241.jpg&ehk=VPbVmeTbGYp4eM04ruObNwuRl2Isjytt%2fRaPEoC4Gy4%3d&risl=&pid=ImgRaw&r=0"
+       style="display: block; opacity: 1; transform: scale(1.1);">
+  <!--  <div class="cover" id="cover" style="opacity: 1;"></div>-->
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+      Please enable it to continue.</strong>
+  </noscript>
+  <!--  <div class="g-filter">-->
+  <div id="app">
+  </div>
+  <!--  </div>-->
+</div>
+<!-- built files will be auto injected -->
+</body>
+</html>
+<style>
+    //#building {
+    //    background: url("./../src/assets/bg.jpg") no-repeat center center fixed;
+    //    width: 100%;
+    //    height: 100%;
+    //    background-size: 100% 100%;
+    ////    position: fixed;
+    //}
+    //=====================
+    //#building {
+    //top: 100px;
+    //left: 0;
+    //width: 100%;
+    //height: 100%;
+    //background-image: url("./../src/assets/bg.jpg");
+    //background-size: cover;
+    //background-position: center;
+    //background-repeat: no-repeat;
+    //position: absolute;
+    //}
+
+    #bgBox {
+        display: none;
+        opacity: 0;
+        z-index: -3;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 1s, transform .25s, filter .25s;
+        backface-visibility: hidden;
+        backdrop-filter: blur(1px);
+    }
+
+    #bgBox1 {
+        display: none;
+        opacity: 0;
+        z-index: -3;
+        position: fixed;
+        left: 18%;
+        top: 0;
+        width: 66%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 1s, transform .25s, filter .25s;
+        backface-visibility: hidden;
+        backdrop-filter: blur(1px);
+    }
+
+    .cover {
+        z-index: -1;
+        opacity: 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .5) 100%), radial-gradient(rgba(0, 0, 0, 0) 43%, rgba(0, 0, 0, .3) 166%);
+        transition: .25s;
+    }
+
+    .g-filter {
+        filter: blur(6px);
+    }
+</style>
